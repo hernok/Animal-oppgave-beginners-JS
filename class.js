@@ -1,3 +1,15 @@
+let animalOneSpecies = document.querySelector(".animalOneSpecies");
+const animalOneColor = document.querySelector(".animalOneColor");
+const animalOneName = document.querySelector(".animalOneName");
+const animalOneCountry = document.querySelector(".animalOneCountry");
+const animalOneImage = document.querySelector(".animalOneImg");
+
+let animalTwoSpecies = document.querySelector(".animalTwoSpecies");
+const animalTwoColor = document.querySelector(".animalTwoColor");
+const animalTwoName = document.querySelector(".animalTwoName");
+const animalTwoCountry = document.querySelector(".animalTwoCountry");
+const AnimalTwoImage = document.querySelector("animalTwoImg");
+
 class Animal {
   constructor(species, name, country, color, imgUrl) {
     this.species = species;
@@ -7,14 +19,14 @@ class Animal {
     this.imgUrl = imgUrl;
   }
 }
-let animalOne = new Animal(
+const animalOne = new Animal(
   "Cat",
   "Pusur",
   "Norway",
   "Gray",
   "https://petkeen.com/wp-content/uploads/2021/05/grey-cat.jpeg"
 );
-let animalTwo = new Animal(
+const animalTwo = new Animal(
   "Ox",
   "Klara",
   "Norway",
@@ -27,17 +39,14 @@ console.log(animalOne.species);
 console.log(animalTwo.imgUrl);
 console.log(animalOne.country);
 
-var img = new Image();
-var div = document.getElementById("animalOne");
+animalOneSpecies.innerHTML = animalOne.species;
+animalOneColor.innerHTML = animalOne.color;
+animalOneName.innerHTML = animalOne.name;
+animalOneCountry.innerHTML = animalOne.country;
+animalOneImage.innerHTML += `<img src='${animalOne.imgUrl}' />`;
 
-const animalSpecies = document.getElementsByClassName("animalOneSpecies");
-const animalColor = document.getElementsByClassName("animalOneColor");
-const animalName = document.getElementsByClassName("animalOneName");
-const animalCountry = document.getElementsByClassName("animalOneCountry");
-const AnimalImage = document.getElementsByClassName("");
-
-const animalSpecies = document.getElementsByClassName("animalTwoSpecies");
-const animalColor = document.getElementsByClassName("animalTwoColor");
-const animalName = document.getElementsByClassName("animalTwoName");
-const animalCountry = document.getElementsByClassName("animalTwoCountry");
-const AnimalImage = document.getElementsByClassName("");
+animalTwoSpecies.innerHTML = animalTwo.species;
+animalTwoColor.innerHTML = animalTwo.color;
+animalTwoName.innerHTML = animalTwo.name;
+animalTwoCountry.innerHTML = animalTwo.country;
+animalTwoImage.innerHTML += `<img src='${animalTwo.imgUrl}' />`;
